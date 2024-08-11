@@ -1,15 +1,21 @@
 # PowerBI-Sales-Performance-Dashboard
 ## Table of Contents
 - [1.Introduction](#1Introduction)
-- [2.ETL Workflow](#2ETL-Workflow)
+- [2.Specifications](#2Specifications)
 - [3.KPIs](#3KPIs)
 - [4.Modeling](#4Modeling)
 - [5.Dashboard](#5Results)
 - [6.Lesson Learned](#6Lesson-Learned)
 ## 1.Introduction
 The object of this solution delivery is to model, measure, analyze and track the status of sales within one retail store. To achieve this, the Orders, People, and Returns datasets have been made accessible to extract valuable insights on sales and orders. Additionally, by employing predefined dimensions and key performance indicators, three different analysis will be generated, serving the information needs of various stakeholders.
-## 2.ETL Workflow
-![image](https://github.com/user-attachments/assets/60f5fffc-0847-48d5-9678-ff19714972e5)
+## 2.Specifications
+The analysis should encompass key measures such as the cost of goods sold, year-over-year sales growth by order date, sales amount discounted, consumer sales, amount returned, rolling 4-month sales by order date, the last refresh of the data model, and total sales by both month ordered and month shipped.
+
+The dashboard is composed of three pages: Sales Summary, Product Detail, and Customer Detail. The Sales Summary page is designed for the executive team, providing a high-level overview of year-over-year sales and gross margin performance trends compared to the previous year, segmented by product category, customer segment, time period, and region. Potential key performance indicators include sales amount, gross margin, and cost.
+
+The Product Detail page aims to assist the sales and marketing teams in gaining a deeper understanding of individual product performance, enabling them to refine operational strategies and deliver targeted campaigns.
+
+Lastly, the Customer Detail page is tailored for the CRM and marketing campaign department, offering insights into customer behaviors. It utilizes top N analysis to identify the most valuable customers and examines the contribution of each customer segment to the total sales amount.
 ## 3.KPIs
 The dataset consists of a total of 9 tables, including 3 source data tables and 6 data mart tables.
 
