@@ -1,57 +1,69 @@
 # PowerBI-Sales-Performance-Dashboard
+
 ## Table of Contents
-- [1.Introduction](#1Introduction)
-- [2.Specifications](#2Specifications)
-- [3.KPIs](#3KPIs)
-- [4.Modeling](#4Modeling)
-- [5.Dashboard](#5Results)
-- [6.Lesson Learned](#6Lesson-Learned)
-## 1.Introduction
-The object of this solution delivery is to model, measure, analyze and track the status of sales within one retail store. To achieve this, the Orders, People, and Returns datasets have been made accessible to extract valuable insights on sales and orders. Additionally, by employing predefined dimensions and key performance indicators, three different analysis will be generated, serving the information needs of various stakeholders.
-## 2.Specifications
-The analysis should encompass key measures such as the cost of goods sold, year-over-year sales growth by order date, sales amount discounted, consumer sales, amount returned, rolling 4-month sales by order date, the last refresh of the data model, and total sales by both month ordered and month shipped.
+- [1. Introduction](#1-introduction)
+- [2. Specifications](#2-specifications)
+- [3. KPIs](#3-kpis)
+- [4. Modeling](#4-modeling)
+- [5. Dashboard](#5-dashboard)
+- [6. Lessons Learned](#6-lessons-learned)
 
-The dashboard is composed of three pages: Sales Summary, Product Detail, and Customer Detail. The Sales Summary page is designed for the executive team, providing a high-level overview of year-over-year sales and gross margin performance trends compared to the previous year, segmented by product category, customer segment, time period, and region. Potential key performance indicators include sales amount, gross margin, and cost.
+## 1. Introduction
 
-The Product Detail page aims to assist the sales and marketing teams in gaining a deeper understanding of individual product performance, enabling them to refine operational strategies and deliver targeted campaigns.
+The objective of this project is to model, measure, analyze, and track the sales performance within a retail store. The project leverages the Orders, People, and Returns datasets to extract valuable insights on sales and order trends. By utilizing predefined dimensions and key performance indicators (KPIs), three distinct analyses are generated to cater to the informational needs of various stakeholders.
 
-Lastly, the Customer Detail page is tailored for the CRM and marketing campaign department, offering insights into customer behaviors. It utilizes top N analysis to identify the most valuable customers and examines the contribution of each customer segment to the total sales amount.
-## 3.KPIs
-The dataset consists of a total of 9 tables, including 3 source data tables and 6 data mart tables.
+## 2. Specifications
 
-**Orders:** This fact table contains information such as customer code, order code, order date, postal code, last product update, and product code
+This analysis covers key measures including:
+- **Cost of Goods Sold (COGS)**
+- **Year-over-Year Sales Growth by Order Date**
+- **Sales Amount Discounted**
+- **Consumer Sales**
+- **Amount Returned**
+- **Rolling 4-Month Sales by Order Date**
+- **Last Data Model Refresh**
+- **Total Sales by Month Ordered and Month Shipped**
 
-**People:** Provides information about person (cutomer name) and regions
+The dashboard comprises three pages:
+1. **Sales Summary:** Tailored for the executive team, providing a high-level overview of year-over-year sales and gross margin performance, segmented by product category, customer segment, time period, and region. Key performance indicators include sales amount, gross margin, and cost.
+   
+2. **Product Detail:** Designed for the sales and marketing teams to gain insights into individual product performance, aiding in refining operational strategies and targeted campaigns.
+   
+3. **Customer Detail:** Created for the CRM and marketing campaign departments, this page offers insights into customer behaviors, utilizing top N analysis to identify the most valuable customers and analyzing each customer segment's contribution to total sales.
 
-**Returns:** Contains data on order codes and indicates whether a product has been returned
+## 3. KPIs
 
-**Calender:** Includes a single record for each date used in the analysis
+The dataset consists of 9 tables, including 3 source data tables and 6 data mart tables:
 
-**Customer:** Generated from the order table, it includes details such as customer code, customer name, and segment
+- **Orders:** The fact table containing customer code, order code, order date, postal code, last product update, and product code.
+- **People:** Contains information about customers and regions.
+- **Returns:** Tracks data on order codes and whether products have been returned.
+- **Calendar:** Provides a single record for each date used in the analysis.
+- **Customer:** Generated from the Orders table, detailing customer code, customer name, and segment.
+- **Date Type:** Specifies whether the date is an order date or a ship date.
+- **Last Refresh:** Updates each time the dashboard is refreshed, recording the latest refresh time.
+- **Product:** Generated from the Orders table, detailing product code, category, sub-category, product name, and last product update.
+- **Region:** Contains postal code, country, state, city, and region information, generated from the Orders table.
 
-**Date Type:** Specifies the type of date, either order date or ship date
+## 4. Modeling
 
-**Last Refresh:** Each time the dashboard is refreshed, this table updates and returns the latest refresh time
+The data modeling process involved structuring the tables to support accurate and efficient analysis. Below is a visual representation of the data model:
 
-**Product:** Generated from the order table with a predefined filter, it includes product details such as product code, category, sub-category, product name, and last product update
+![Data Modeling Workflow](https://github.com/user-attachments/assets/5c655221-fb2f-4d9a-8a91-c367094b12f8)
 
-**Region:** Generated from the order table, this table contains information about postal code, country, state, city, and region
-## 4.Modeling 
+## 5. Dashboard
 
-![20240811032926](https://github.com/user-attachments/assets/5c655221-fb2f-4d9a-8a91-c367094b12f8)
+The Power BI dashboard visualizes the data, enabling stakeholders to interpret the analysis effectively. *(Note: All data has been replaced with simulated data.)*
 
-## 5.Dashboard
+![Dashboard Example](https://github.com/user-attachments/assets/9574ed59-162d-46b2-b2a9-757cf6082a94)
 
-Visualize the data and create the dashboard using PowerBI (All data has been replaced with simulated data).
+## 6. Lessons Learned
 
-![20240811033042](https://github.com/user-attachments/assets/9574ed59-162d-46b2-b2a9-757cf6082a94)
+1. **Gross Margin Rate as a Profitability Metric:**  
+   The Gross Margin Rate was crucial in understanding product profitability. Focusing on high-margin products helped maximize overall revenue.
 
-## 6.Lesson Learned
-**1.Gross Margin Rate as a Profitability Metric:**
-The Gross Margin Rate proved vital in understanding product profitability. By focusing on high-margin products, the project effectively contributed to maximizing overall revenue.
+2. **Comprehensive Trend Analysis:**  
+   Analyzing both short-term (rolling 4-month) and long-term (year-over-year) trends provided valuable insights. This dual analysis optimized inventory management and established performance benchmarks, addressing both immediate and long-term market dynamics.
 
-**2.Comprehensive Trend Analysis:**
-Analyzing both short-term (rolling 4-month) and long-term (year-over-year) trends provided valuable insights. This dual analysis optimized inventory management and established performance benchmarks, enabling the project to address both immediate and long-term market dynamics.
-
-**3.Return Rate as a Key Performance Indicator:**
-Monitoring the Return Rate helped the product team identify areas for improvement. By addressing the causes of returns, the project improved product quality and customer satisfaction, thereby enhancing profitability.
+3. **Return Rate as a Key Performance Indicator:**  
+   Monitoring the Return Rate allowed the product team to identify areas for improvement. By addressing the causes of returns, the project improved product quality and customer satisfaction, ultimately enhancing profitability.
