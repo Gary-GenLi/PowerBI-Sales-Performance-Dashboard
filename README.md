@@ -37,9 +37,15 @@ The dataset consists of a total of 9 tables, including 3 source data tables and 
 
 **Region:** Generated from the order table, this table contains information about postal code, country, state, city, and region
 ## 4.Modeling 
+
 ![20240811032926](https://github.com/user-attachments/assets/5c655221-fb2f-4d9a-8a91-c367094b12f8)
+
 ## 5.Dashboard
+
+Visualize the data and create the dashboard using PowerBI (All data has been replaced with simulated data).
+
 ![20240811033042](https://github.com/user-attachments/assets/9574ed59-162d-46b2-b2a9-757cf6082a94)
+
 ## 6.Lesson Learned
 **1.Gross Margin Rate as a Profitability Metric:**
 The Gross Margin Rate proved vital in understanding product profitability. By focusing on high-margin products, the project effectively contributed to maximizing overall revenue.
