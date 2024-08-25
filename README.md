@@ -1,4 +1,4 @@
-# PowerBI-Sales-Performance-Dashboard
+# Sales-Performance-Dashboard-PowerBI
 
 ## Table of Contents
 - [1. Introduction](#1-introduction)
